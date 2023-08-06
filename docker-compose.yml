@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  insights-front:
+    container_name: insights-front
+    build: .
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./:/app/
+      - ./dist:/app/dist
+      - /app/node_modules
